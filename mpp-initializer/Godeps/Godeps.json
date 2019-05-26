@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/hd-Li/kubernetes-initializer-tutorial/envoy-initializer",
+	"ImportPath": "github.com/hd-Li/kubernetes-initializer-tutorial/mpp-initializer",
 	"GoVersion": "go1.12",
 	"GodepVersion": "v80",
 	"Deps": [
@@ -88,6 +88,11 @@
 			"Rev": "a0d98a5f288019575c6d1f4bb1573fef2d1fcdc4"
 		},
 		{
+			"ImportPath": "github.com/imdario/mergo",
+			"Comment": "v0.3.5",
+			"Rev": "9316a62528ac99aaecb4e47eadd6dc8aa6533d58"
+		},
+		{
 			"ImportPath": "github.com/json-iterator/go",
 			"Comment": "1.1.3-22-gf2b4162",
 			"Rev": "f2b4162afba35581b6d4a50d3b8f34e33c144682"
@@ -106,6 +111,11 @@
 			"ImportPath": "github.com/peterbourgon/diskv",
 			"Comment": "v2.0.1",
 			"Rev": "5f041e8faa004a95c88a202771f4cc3e991971e6"
+		},
+		{
+			"ImportPath": "github.com/spf13/pflag",
+			"Comment": "v1.0.1",
+			"Rev": "583c0c0531f06d5278b7d917446061adc344b5cd"
 		},
 		{
 			"ImportPath": "golang.org/x/crypto/ssh/terminal",
@@ -747,12 +757,32 @@
 			"Rev": "f06dbfd7354359a944eca1b0a555067933f10c3e"
 		},
 		{
+			"ImportPath": "k8s.io/client-go/tools/auth",
+			"Comment": "kubernetes-1.11.0-beta.0-182-gf06dbfd",
+			"Rev": "f06dbfd7354359a944eca1b0a555067933f10c3e"
+		},
+		{
 			"ImportPath": "k8s.io/client-go/tools/cache",
 			"Comment": "kubernetes-1.11.0-beta.0-182-gf06dbfd",
 			"Rev": "f06dbfd7354359a944eca1b0a555067933f10c3e"
 		},
 		{
+			"ImportPath": "k8s.io/client-go/tools/clientcmd",
+			"Comment": "kubernetes-1.11.0-beta.0-182-gf06dbfd",
+			"Rev": "f06dbfd7354359a944eca1b0a555067933f10c3e"
+		},
+		{
 			"ImportPath": "k8s.io/client-go/tools/clientcmd/api",
+			"Comment": "kubernetes-1.11.0-beta.0-182-gf06dbfd",
+			"Rev": "f06dbfd7354359a944eca1b0a555067933f10c3e"
+		},
+		{
+			"ImportPath": "k8s.io/client-go/tools/clientcmd/api/latest",
+			"Comment": "kubernetes-1.11.0-beta.0-182-gf06dbfd",
+			"Rev": "f06dbfd7354359a944eca1b0a555067933f10c3e"
+		},
+		{
+			"ImportPath": "k8s.io/client-go/tools/clientcmd/api/v1",
 			"Comment": "kubernetes-1.11.0-beta.0-182-gf06dbfd",
 			"Rev": "f06dbfd7354359a944eca1b0a555067933f10c3e"
 		},
@@ -793,6 +823,11 @@
 		},
 		{
 			"ImportPath": "k8s.io/client-go/util/flowcontrol",
+			"Comment": "kubernetes-1.11.0-beta.0-182-gf06dbfd",
+			"Rev": "f06dbfd7354359a944eca1b0a555067933f10c3e"
+		},
+		{
+			"ImportPath": "k8s.io/client-go/util/homedir",
 			"Comment": "kubernetes-1.11.0-beta.0-182-gf06dbfd",
 			"Rev": "f06dbfd7354359a944eca1b0a555067933f10c3e"
 		},
