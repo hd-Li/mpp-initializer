@@ -23,7 +23,7 @@ import (
 )
 
 const(
-	defaultInitializerName = "mpp"
+	defaultInitializerName = "mpp.initializer.kubernetes.io"
 	defaultConfigmap = "mpp-initializer"
 )
 
