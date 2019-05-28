@@ -1,0 +1,13 @@
+apiVersion: admissionregistration.k8s.io/v1alpha1
+kind: InitializerConfiguration
+metadata:
+  name: mpp
+initializers:
+  - name: mpp.initializer.kubernetes.io
+    rules:
+      - apiGroups:
+          - "*"
+        apiVersions:
+          - "*"
+        resources:
+          - statefulsets
