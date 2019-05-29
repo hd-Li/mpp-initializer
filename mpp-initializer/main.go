@@ -104,8 +104,13 @@ func initializeStatefulset(ss *v1.StatefulSet, term corev1.PodAffinityTerm, clie
 		initializedSS := new(v1.StatefulSet)
 		ss.DeepCopyInto(initializedSS)
 		initializedSS.ObjectMeta.Initializers = nil
+		if initializedSS.Spec.Template.Spec.Affinity == nil{
+			log.Println("affinity is nil")
+		}
 		
-		initializedSS.Spec.Template.Spec.Affinity.PodAntiAffinity.RequiredDuringSchedulingIgnoredDuringExecution = append(initializedSS.Spec.Template.Spec.Affinity.PodAntiAffinity.RequiredDuringSchedulingIgnoredDuringExecution, term)
+		paa := new(corev1.PodAntiAffinity)
+		paa.RequiredDuringSchedulingIgnoredDuringExecution = append(paa.RequiredDuringSchedulingIgnoredDuringExecution, term)
+		initializedSS.Spec.Template.Spec.Affinity = &corev1.Affinity{PodAntiAffinity: paa}
 		
 		oldData, err := json.Marshal(ss)
 		if err != nil{
@@ -137,6 +142,6 @@ func configmapToTerm(configmap *corev1.ConfigMap) (corev1.PodAffinityTerm, error
 	if err != nil{
 		log.Fatalln(err.Error())
 	}
-	
+	log.Println(term)
 	return term, err
 }

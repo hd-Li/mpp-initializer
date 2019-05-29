@@ -11,4 +11,4 @@ data:
           operator: In
           values:
           - mpp
-        topologyKey: kubernetes.io/hostname
+      topologyKey: kubernetes.io/hostname
